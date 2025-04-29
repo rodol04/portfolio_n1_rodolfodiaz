@@ -55,6 +55,12 @@
     color: black;
     font-weight: bold;
   }
+
+  .navbar li:hover {
+    background-color: rgb(123, 123, 209);
+    padding: 1%;
+    transition: 0.2s ease-in;
+  }
   
   /* INICIO HEADER */
   .inicio-header {
@@ -97,6 +103,7 @@
     margin-top: 1%;
   }
 
+
   .boton-abrir a{
     text-align: center;
     text-decoration: none;
@@ -106,6 +113,13 @@
     border-radius: 15px;
     padding: 0.8% 1.5%;
   }
+
+  .boton-abrir a:hover {
+    background-color: rgb(123, 123, 209);
+    padding: 2%;
+    transition: 0.2s ease-in;
+  }
+
 
   .minitexto-inicio ul {
     display: flex;
@@ -216,6 +230,12 @@
     border: none;
     border-radius: 15px;
     padding: 1% 1.8%;
+  }
+
+  .boton-trabajar a:hover {
+    background-color: rgb(123, 123, 209);
+    padding: 2%;
+    transition: 0.2s ease-in;
   }
 
 
@@ -778,7 +798,11 @@ width: 100%;
     padding: 0.5em;
     border-radius: 10px;
   }
-
+  .botones-links ul li a:hover {
+    background-color: rgb(123, 123, 209);
+    padding: 5%;
+    transition: 0.2s ease-in;
+  }
 
   /* Footer */
   .footer {
@@ -858,3 +882,67 @@ width: 100%;
    font-size: 2em;
   }
 
+
+
+
+  .body-galeria {
+    margin: 0;
+    padding: 20px;
+    font-family: sans-serif;
+    background: #f9f9f9;
+  }
+
+  .body-galeria p a{
+    text-decoration: none;
+    color: #FFD700;
+    font-weight: bolder;
+    font-size: 1.5em;
+    margin: 5%;
+  }
+
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 5px;
+  }
+
+  .galeria{
+    animation: movimiento-cambio 2s ease-in-out infinite alternate;
+  
+  }
+
+  @keyframes movimiento-cambio{
+
+    0%{
+      display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    }
+
+    100%{
+      display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+    gap: 5px;
+    
+    }
+    
+  }
+
+
+
+  .galeria img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.6s ease, box-shadow 0.4s ease;
+    cursor: default;
+  }
+
+  .galeria img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+
+  .galeria-titulo{
+    text-align: center;
+    margin-bottom: 30px;
+  }
